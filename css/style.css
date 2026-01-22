@@ -703,8 +703,25 @@ footer a:hover{
 
 /* formulario mobil */
 @media screen and (max-width: 480px) {
-        form{
+         form{
+            width: 350px;
+            margin: 0;
+            padding: 0;
+        }
+        .form{
             width: 100%;
+        } 
+        #nombre{
+            width: 350px;
+            margin: 0;
+        }
+        #mail{
+            width: 350px;
+            margin: 0;
+        }
+        #mensaje{
+            width: 350px;
+            margin: 0;
         }
 }
 
