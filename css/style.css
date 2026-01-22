@@ -769,5 +769,15 @@ footer a:hover{
 
 
 }
+@media screen and (max-width: 480px){
+    h1 {
+  font-size: 2em; /* O un tamaño mayor que el h2 */
+}
+
+h2 {
+  font-size: 1.5em; /* Por debajo del h1 */
+}
+
+}
 
 
