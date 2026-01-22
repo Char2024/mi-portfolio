@@ -598,9 +598,9 @@ footer a:hover{
 @media screen and (max-width: 480px) {
     .tres{
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 300px 250px 300px;
+        grid-template-rows: 200px auto 250px auto;
     }
-
+    
     .prtr1 {
         order: 1;
     }
@@ -615,7 +615,8 @@ footer a:hover{
 
     .prtr4 {
         order: 4;
-    }      
+    }   
+    
         
 }
 
@@ -649,8 +650,11 @@ footer a:hover{
     }  
     .listServ{
         margin: 0;
-        padding: 0;
+        /* padding: 0 10 0 5; */
     }  
+    .listServ li{
+        margin-left: 20px;
+    }
 }
 @media screen and (min-width: 481px) and (max-width: 950px) {
     .cuatro{
