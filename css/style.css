@@ -713,15 +713,15 @@ footer a:hover{
         } 
         #nombre{
             width: 350px;
-            margin: 0;
+            margin-bottom: 5px;
         }
         #mail{
             width: 350px;
-            margin: 0;
+            margin-bottom: 5px;
         }
         #mensaje{
             width: 350px;
-            margin: 0;
+            margin-bottom: 5px;
         }
 }
 
