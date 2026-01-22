@@ -699,6 +699,9 @@ footer a:hover{
     .seis img{
         width: 30px;
     }
+    .listServ{
+        padding-left: 10px;
+    }
 }
 
 /* formulario mobil */
@@ -738,6 +741,7 @@ footer a:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 30px;
     }
     .fdvRebelde{
         padding: 0px;
