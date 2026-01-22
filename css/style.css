@@ -605,7 +605,7 @@ footer a:hover{
 @media screen and (max-width: 480px) {
     .tres{
         grid-template-columns: 1fr;
-        grid-template-rows: 200px auto 250px auto;
+        grid-template-rows: auto auto auto auto;
     }
     
     .prtr1 {
