@@ -315,7 +315,7 @@ main{
 .seis{
     display: flex;
     flex-direction: column;
-    justify-items: center; 
+    /* justify-items: center;  */
     align-items: center; 
     align-content: space-around;
     
@@ -331,9 +331,9 @@ main{
     flex-direction: column;
     justify-items: center;
 } 
- .seis h1{
+ /* .seis h1{
     justify-self: center;
-} 
+}  */
 .seis img{
     margin: 10px;
     border-radius: 10px;
@@ -696,6 +696,9 @@ footer a:hover{
     .seis{
         flex-direction: column;
     }
+    .seis h1{
+    text-align: center;
+}
     .seis img{
         width: 30px;
     }
