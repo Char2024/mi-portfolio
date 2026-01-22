@@ -698,13 +698,16 @@ footer a:hover{
     }
     .seis h1{
     text-align: center;
-}
-#skls h1 {
-  font-size: 2rem;
+    
 }
     .seis img{
         width: 30px;
+        margin: 20px 0px 20px 0px;
     }
+#skls h1 {
+  font-size: 2rem;
+}
+    
     .listServ{
         padding-left: 10px;
     }
