@@ -713,7 +713,7 @@ footer a:hover{
         } 
         .form h3{
             
-            margin: 0px 5px 0px 5px;
+            margin: 0px 5px 0px 10px;
         }
         #nombre{
             width: 350px;
@@ -721,14 +721,14 @@ footer a:hover{
         }
         #mail{
             width: 350px;
-            margin-bottom: 30px;
+            margin: 5px 0px;
         }
         #mensaje{
             width: 350px;
-            margin-bottom: 30px;
+            margin: 5px 0px;
         }
         #enviar{
-            margin-bottom: 5px;
+            margin-bottom: 30px;
         }
 }
 
