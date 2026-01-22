@@ -579,8 +579,15 @@ footer a:hover{
         flex-direction: column;
         align-items: center;
     }
+    .dos p{
+        padding: 10px;
+        margin: 0;
+    }
     .dos img{
         width: 100%;
+    }
+    .dos h2{
+        padding: 10px;
     }
     
 }
@@ -776,6 +783,7 @@ footer a:hover{
 
 h2 {
   font-size: 1.5em; /* Por debajo del h1 */
+  margin: 10px 0px 10px 0px;
 }
 
 }
