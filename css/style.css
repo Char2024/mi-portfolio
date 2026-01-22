@@ -1,282 +1,765 @@
-/* =========================================================
-
-1. RESET / BASE
-   ========================================================= */
-
+/* font */
 * {
   box-sizing: border-box;
-  }
+}
 
-@import url('[https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap](https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-margin: 0;
-padding: 0;
-font-family: "Roboto", sans-serif;
-font-weight: 400;
-background-color: rgb(242, 242, 242);
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(242, 242, 242);
 }
-
-/* =========================================================
-2. TIPOGRAFÍA GLOBAL
-========================================================= */
-h1 {
-font-size: clamp(2rem, 4vw, 2.5rem);
-}
-
-h2 {
-font-size: clamp(1.4rem, 3vw, 1.8rem);
-}
-
-a {
-text-decoration: none;
-color: inherit;
-}
-
-/* =========================================================
-3. ELEMENTOS BASE
-========================================================= */
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-}
-
-img {
-max-width: 100%;
-height: auto;
-}
-
-/* =========================================================
-4. LAYOUT GENERAL
-========================================================= */
-main {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-/* =========================================================
-5. HEADER / NAV
-========================================================= */
 header {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-background-color: rgb(242, 211, 153);
-padding: 30px;
-position: sticky;
-top: 0;
-z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(242, 211, 153);
+  padding: 30px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: auto;
+}
+header img{
+    width: 30%;
+    height: auto;
+    
 }
 
-header img {
-width: 30%;
+ul{
+    display: flex;
+    list-style: none;  
+    padding: 10px;  
+    
 }
-
+li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 0px 10px 0px 10px;
+}
+li a:hover{
+    font-weight: 1000;
+}
+/* prueba nav hamburguesa */
 .nav-list {
-display: flex;
-gap: 1.5rem;
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
 }
 
 .nav-list a {
-font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
 
-li a:hover {
-font-weight: 1000;
-}
-
+/* Botón contacto */
 .btnCon a {
-padding: 0.5rem 1rem;
-background: #000;
-color: #fff;
-border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
 }
 
+/* Botón hamburguesa */
 .menu-toggle {
-display: none;
-font-size: 2rem;
-background: none;
-border: none;
-cursor: pointer;
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* fin prueba nav hamburguesa */
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;  
 }
 
-/* =========================================================
-6. SECCIONES
-========================================================= */
-/* Inicio */
-.inicio {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-width: 80%;
-margin-top: 30px;
+.inicio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(242, 242, 242);
+    margin-top: 30px;
 }
 
-.uno {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px;
+.uno{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items:center; 
+    padding: 10px; 
 }
 
-.uno p { padding-right: 30px; }
-.uno h1 { text-align: center; }
-.uno h2 { padding-right: 30px; }
-
-.uno img {
-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+.uno p{
+    padding-right: 30px;
+}
+.uno h1{
+    text-align: center;
+}
+.uno h2{
+    padding-right: 30px;
+}
+.uno img{
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Acerca */
-.acerca {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-width: 80%;
-margin-top: 30px;
-}
-
-.dos {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px;
-}
-
-.dos img {
-width: 350px;
-margin-right: 10px;
-box-shadow: 5px 5px 10px rgba(0,0,0,.5);
-}
-
-/* Proyectos */
-.proyectos {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 80%;
-height: 700px;
-margin-top: 40px;
-}
-
-.tres {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-}
-
-.tres div {
-background: #fff;
-padding: 10px;
-box-shadow: 5px 5px 10px rgba(0,0,0,.2);
-}
-
-/* Servicios */
-.servicios {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-width: 80%;
-margin-top: 50px;
-}
-
-.cuatro,
-.cinco {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
-}
-
-.listServ {
-display: flex;
-flex-direction: column;
-width: 100%;
-margin-left: 10%;
-}
-
-/* Skills */
-.skills {
-display: flex;
-justify-content: center;
-}
-
-.seis {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 10px;
-}
-
-.seis img {
-width: 60px;
-margin: 10px;
-border-radius: 10px;
-box-shadow: 5px 5px 10px rgba(0,0,0,.2);
-}
-
-/* Formulario */
-.form {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 80%;
-margin-top: 50px;
-}
-
-form {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 60%;
-margin-bottom: 40px;
-}
-
-/* Footer */
-footer {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-justify-items: center;
-background-color: rgb(166, 118, 101);
-padding: 30px;
-}
-
-footer img {
-width: 60px;
-}
-
-/* =========================================================
-7. ANCLAS / SCROLL
-========================================================= */
 #mip, #app, #acer, #pro, #serv, #proc, #skls, #cont {
-scroll-margin-top: 270px;
+  scroll-margin-top: 270px;
 }
 
-/* =========================================================
-8. MEDIA QUERIES
-========================================================= */
-@media (max-width: 900px) {
-header img { width: 50%; }
+/* pagina proyecto 1 */
+.unoPr1{
+    display: flex;
+    flex-direction: rcolumn;
+    justify-content: center; 
+    align-items:center; 
+    padding: 10px; 
+    width: 80%;
+    height: auto;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 10px;
 }
+.unoPr1 div a{
+    text-decoration: none;
+    color: black;
+}
+.unoPr1 div a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.acerca{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(242, 242, 242 );
+    margin-top: 30px;
+
+}
+
+.dos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items:center; 
+    padding: 10px;   
+}
+.dos p{
+    padding-left: 20px;
+}
+.dos h2{
+    padding-left: 20px;
+}
+.dos img{
+    width: 350px;
+    margin-right: 10px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.dos a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+
+.proyectos{
+     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; 
+    width: 80%;
+    height: 700px;
+    background-color: rgb(242, 242, 242 );
+    margin-top: 40px;
+
+}
+
+.tres{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;   
+    
+}
+.tres div{
+    background-color: white;  
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+.tres div a{
+    text-decoration: none;
+    color: black;
+}
+.tres div a:visited{
+    color: black;
+}
+.tres div img{
+    width: 100%;
+    height: auto;
+}
+.prtr{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+
+.servicios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(242, 242, 242);
+    margin-top: 50px;
+
+}
+
+
+.cuatro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    align-content: space-around;
+    padding: 10px;   
+}
+.cuatro img{
+    width: 70%;
+    margin-left: 20%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.listServ{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10%;
+    list-style-type: disc;
+    margin-right: 50px;
+    padding-right: 50px;
+}
+
+
+
+.proceso{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(242, 242, 242);
+    margin-top: 40px;
+
+}
+
+
+.cinco{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    align-content: space-around;
+    padding: 10px;   
+}
+.cinco img{
+    width: 70%;
+    margin-left: 20%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.listServ{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10%;
+    list-style-type: disc;
+    margin-right: 50px;
+    padding-right: 50px;
+}
+
+
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seis{
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center;  */
+    align-items: center; 
+    align-content: space-around;
+    
+    
+    padding: 10px;   
+}
+.seisSkl{
+    justify-items: center;
+}
+
+.skl{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+} 
+ /* .seis h1{
+    justify-self: center;
+}  */
+.seis img{
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: auto;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-content: center;
+    padding-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(242, 242, 242 );
+    margin-top: 50px;
+}
+#nombre{
+    width: 400px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+#mail{
+    width: 400px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+#mensaje{
+    width: 400px;
+    height: 100px;
+    margin: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+#enviar{
+    width: 350px;;
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(38, 82, 140);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 300px;
+    justify-items: center;
+    background-color: rgb(166, 118, 101);
+    padding: 30px;
+}
+.fdvRebelde{
+    justify-self: end;
+    padding-right: 40px;
+    align-self: center;
+}
+
+footer img{
+    width: 60px;
+    height: auto;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    font-weight: 600;
+}
+
+.lwap img{
+    position: fixed;
+    right: 40px;
+    bottom: 150px;
+    width: 50px;
+    height: auto;
+    
+}
+/*---------------------- Media queries ----------------------*/
+
+/* header mobil */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        margin: 0;
+        
+    }    
+}
+@media screen and (max-width: 480px) {
+    ul {
+        flex-direction: column;
+    }
+}
+/* header tablet */
+ /* @media screen and (min-width: 481px) and (max-width: 950px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        
+    }       
+
+}  */
+
+/*prueba menu hamburguesa  */
+
+     @media (max-width: 900px) {
+    
+    header img{
+        width: 50%;
+    }
+     .menu-toggle {
+    position: fixed; /* fijo en pantalla para que no quede detrás */
+    top: 20px;       /* ajusta según tu diseño */
+    right: 20px;     /* ajusta según tu diseño */
+    z-index: 3001;   /* un número alto para que quede sobre todo */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+    position: fixed; /* si es fixed o absolute, asegúrate de que z-index sea menor */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh; /* para menú fullscreen */
+    background: rgba(255, 255, 255, 0.92);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000; /* menos que .menu-toggle */
+}
+
+.nav.active {
+    display: flex;
+}
+.nav-list{
+    flex-direction: column;
+}
+     }
+
 
 @media (max-width: 480px) {
-header { flex-direction: column; }
-ul { flex-direction: column; }
-.inicio, .acerca, .servicios, .proceso { width: 100%; }
-.uno, .dos, .cuatro, .cinco { flex-direction: column; }
-#skls h1 { font-size: 2rem; }
-footer { display: flex; flex-direction: column; }
-#mip, #app, #acer, #pro, #serv, #proc, #skls, #cont {
-scroll-margin-top: 190px;
+    
+    header img{
+        height: 100px;
+        width: auto;
+    }
+
 }
+/* fin prueba menu hambur */
+/* inicio mobil */
+
+@media screen and (max-width: 480px) {
+        .inicio{
+            width: 100%;
+            padding: 10px;
+
+        }
+    
 }
+
+
+@media screen and (min-width: 481px) and (max-width: 950px){
+        .inicio{
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
+
+        }
+        
+}
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  header {
+    padding: 20px 20px;
+  }
+  #mip, #app, #acer, #pro, #serv, #proc, #skls, #cont {
+    scroll-margin-top: 220px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+        .uno {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+}
+
+/* acerca de mi mobil */
+@media screen and (max-width: 480px) {
+        .acerca{
+            width: 100%;
+            margin: 0px;
+        }
+        
+}
+@media screen and (min-width: 481px) and (max-width: 950px) {
+        .acerca{
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0px;
+        }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .dos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .dos img{
+        width: 100%;
+    }
+    
+}
+/* proyectos mobil */
+@media screen and (max-width: 480px) {
+        .proyectos{
+            width: 100%;
+            height: 100%;
+            padding: 0px 10px 0px 10px;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .tres{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 300px 250px 300px;
+    }
+
+    .prtr1 {
+        order: 1;
+    }
+
+    .prtr2 {
+        order: 2;
+    }
+
+    .prtr3 {
+        order: 3;
+    }
+
+    .prtr4 {
+        order: 4;
+    }      
+        
+}
+
+@media screen and (min-width: 481px) and (max-width: 950px) {
+    .tres{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    
+        
+}
+/* servicios mobil */
+@media screen and (max-width: 480px) {
+    .servicios{
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    .cuatro{
+        flex-direction: column;
+    }
+    .cuatro img{
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        
+    }  
+    .listServ{
+        margin: 0;
+        padding: 0;
+    }  
+}
+@media screen and (min-width: 481px) and (max-width: 950px) {
+    .cuatro{
+        flex-direction: column;
+        width: 100%;
+    }
+    .cuatro img{ 
+        width: 100%;
+        margin: 0px;
+    }
+    
+}
+
+/* workflow mobil */
+@media screen and (max-width: 480px) {
+        .proceso{
+            width: 100%;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    .cinco{
+        flex-direction: column;
+    }
+    .cinco img{
+        width: 100%;
+        margin: 0px;
+    }
+    
+}
+@media screen and (min-width: 481px) and (max-width: 950px) {
+    .cinco{
+        flex-direction: column;
+    }
+    .cinco img{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+    
+/* skills mobil */
+@media screen and (max-width: 480px) {
+    .seis{
+        flex-direction: column;
+    }
+    .seis h1{
+    text-align: center;
+}
+#skls h1 {
+  font-size: 2rem;
+}
+    .seis img{
+        width: 30px;
+    }
+    .listServ{
+        padding-left: 10px;
+    }
+}
+
+/* formulario mobil */
+@media screen and (max-width: 480px) {
+         form{
+            width: 350px;
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+            width: 100%;
+        } 
+        .form h3{
+            
+            margin: 10px;
+        }
+        #nombre{
+            width: 350px;
+            margin: 5px 0px;
+        }
+        #mail{
+            width: 350px;
+            margin: 5px 0px;
+        }
+        #mensaje{
+            width: 350px;
+            margin: 5px 0px;
+        }
+        #enviar{
+            margin-bottom: 30px;
+        }
+}
+
+/* footer mobil */
+@media screen and (max-width: 480px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .fdvRebelde{
+        padding: 0px;
+    }
+    footer img{
+        width: 30px;
+        height: auto;
+    }
+    #mip, #app, #acer, #pro, #serv, #proc, #skls, #cont {
+    scroll-margin-top: 190px;
+  }
+
+
+}
+
