@@ -274,7 +274,7 @@
             <!-- <h2>Dejame tu mensaje o inquietud, y en breve me pongo en contacto</h2> -->
             <h3>Contame tu idea y diseñemos una mejor experiencia digital</h3>   
                         
-            <form action="">
+            <!-- <form action="">
                 
                
                     <label for="nombre"></label>
@@ -290,7 +290,33 @@
                 
 
                 <input type="button" value="Enviar mensaje" id="enviar">
+            </form> -->
+            <form id="contacto" action="https://formsubmit.co/juanc.goz@gmail.com" method="POST">
+
+                <label for="nombre"></label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+
+                <label for="mail"></label>
+                <input type="email" name="email" id="mail" placeholder="Ingresa tu email" required>
+
+                <label for="mensaje"></label>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+                <!-- Anti-spam -->
+                <input type="text" name="_honey" style="display:none">
+
+                <!-- Configuración -->
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde mi portfolio">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="submit" value="Enviar mensaje" id="enviar">
+
             </form>
+            <!-- mensaje de éxito -->
+            <p id="form-mensaje" class="form-mensaje">
+            ✅ Mensaje enviado con éxito. ¡Gracias por contactarte!
+            </p>
+
             
          </section>
         

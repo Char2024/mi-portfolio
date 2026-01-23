@@ -20,3 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Mensaje de formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contacto");
+  const mensaje = document.getElementById("form-mensaje");
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        "Accept": "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        mensaje.style.display = "block";
+      } else {
+        alert("Hubo un error al enviar el mensaje.");
+      }
+    })
+    .catch(() => {
+      alert("No se pudo enviar el mensaje.");
+    });
+  });
+});
