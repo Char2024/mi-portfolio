@@ -23,7 +23,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(242, 211, 153);
+  background-color: rgb(247, 222, 173);
   padding: 30px 30px;
   position: sticky;
   top: 0;
@@ -406,7 +406,7 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 300px;
     justify-items: center;
-    background-color: rgb(166, 118, 101);
+    background-color:rgb(111, 119, 119);
     padding: 30px;
 }
 .fdvRebelde{
