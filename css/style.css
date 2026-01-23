@@ -787,5 +787,16 @@ h2 {
 }
 
 }
+@media screen and (max-width: 480px){
+    .lwap img{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: 50px;
+    height: auto;
+    
+}
+}
+
 
 
